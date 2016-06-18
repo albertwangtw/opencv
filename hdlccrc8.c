@@ -11,11 +11,14 @@ BYTE HdlcCrc8Get(void)
    return hdlccrc8;
 }
 
+
+// Initial CRC 
 void HdlcCrc8Initialize(void)
 {
    hdlccrc8 = 0xFF;
 }
 
+// Caculate CRC
 void HdlcCrc8AddByte(BYTE crc8temp)
 {
    crc8temp ^= hdlccrc8;
